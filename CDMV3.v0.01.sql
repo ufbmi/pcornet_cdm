@@ -3,8 +3,7 @@
 -- CDM.v3 Bootstrap Script
 -- MSSQL version
 -- Author(s): Jiang Bian (bianjiang@ufl.edu)
--- Based on: https://github.com/SCILHS/i2p-transform/blob/master/MSSQL/PCORNetLoader.sql
--- V0.02: Add UPDATED and SOURCE columns to each table; HARVEST table does have these two columns as well. Up for discussion
+-- V0.02: OneFlorida Specific: Add UPDATED and SOURCE columns to each table for tracking the SOURCE system and when the record is updated; HARVEST table does have these two columns as well. Up for discussion.
 -- V0.01: (BOOTSTRAPED FROM PCORNET CDM excel specs)
 --    - unique constraint is not enforced;
 --    - FK is not enforced;
@@ -14,7 +13,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------
 
--- Change to your pmn database
+-- Change to your database
 USE ONEFLDW
 GO
 
