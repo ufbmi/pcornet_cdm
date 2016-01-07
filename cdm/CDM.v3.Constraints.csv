@@ -1,0 +1,71 @@
+TABLE_NAME,FIELD_NAME,CONSTRAINT
+DEMOGRAPHIC,PATID,unique
+DEMOGRAPHIC,PATID,"required, not null"
+ENROLLMENT,PATID,"required, not null"
+ENROLLMENT,ENR_START_DATE,"required, not null"
+ENROLLMENT,ENR_BASIS,"required, not null"
+ENROLLMENT,"PATID, ENR_START_DATE, ENR_BASIS",unique
+ENCOUNTER,ENCOUNTERID,unique
+ENCOUNTER,ENCOUNTERID,"required, not null"
+ENCOUNTER,PATID,"required, not null"
+ENCOUNTER,ADMIT_DATE,"required, not null"
+ENCOUNTER,ENC_TYPE,"required, not null"
+DIAGNOSIS,DIAGNOSISID,unique
+DIAGNOSIS,DIAGNOSISID,"required, not null"
+DIAGNOSIS,PATID,"required, not null"
+DIAGNOSIS,ENCOUNTERID,"required, not null"
+DIAGNOSIS,DX,"required, not null"
+DIAGNOSIS,DX_TYPE,"required, not null"
+DIAGNOSIS,DX_SOURCE,"required, not null"
+PROCEDURES,PROCEDURESID,unique
+PROCEDURES,PROCEDURESID,"required, not null"
+PROCEDURES,PATID,"required, not null"
+PROCEDURES,ENCOUNTERID,"required, not null"
+PROCEDURES,PX,"required, not null"
+PROCEDURES,PX_TYPE,"required, not null"
+VITAL,VITALID,unique
+VITAL,VITALID,"required, not null"
+VITAL,PATID,"required, not null"
+VITAL,MEASURE_DATE,"required, not null"
+VITAL,VITAL_SOURCE,"required, not null"
+DISPENSING,DISPENSINGID,unique
+DISPENSING,DISPENSINGID,"required, not null"
+DISPENSING,PATID,"required, not null"
+DISPENSING,DISPENSE_DATE,"required, not null"
+DISPENSING,NDC,"required, not null"
+LAB_RESULT_CM,LAB_RESULT_CM_ID,unique
+LAB_RESULT_CM,LAB_RESULT_CM_ID,"required, not null"
+LAB_RESULT_CM,PATID,"required, not null"
+LAB_RESULT_CM,RESULT_DATE,"required, not null"
+CONDITION,CONDITIONID,unique
+CONDITION,CONDITIONID,"required, not null"
+CONDITION,PATID,"required, not null"
+CONDITION,CONDITION,"required, not null"
+CONDITION,CONDITION_TYPE,"required, not null"
+CONDITION,CONDITION_SOURCE,"required, not null"
+PRO_CM,PRO_CM_ID,unique
+PRO_CM,PRO_CM_ID,"required, not null"
+PRO_CM,PATID,"required, not null"
+PRO_CM,PRO_ITEM,"required, not null"
+PRO_CM,PRO_DATE,"required, not null"
+PRO_CM,PRO_RESPONSE,"required, not null"
+PRESCRIBING,PRESCRIBINGID,unique
+PRESCRIBING,PRESCRIBINGID,"required, not null"
+PRESCRIBING,PATID,"required, not null"
+PCORNET_TRIAL,"PATID, TRIALID, PARTICIPANTID",unique
+PCORNET_TRIAL,PATID,"required, not null"
+PCORNET_TRIAL,TRIALID,"required, not null"
+PCORNET_TRIAL,PARTICIPANTID,"required, not null"
+DEATH,"PATID, DEATH_DATE, DEATH_SOURCE",unique
+DEATH,PATID,"required, not null"
+DEATH,DEATH_DATE,"required, not null"
+DEATH,DEATH_SOURCE,"required, not null"
+DEATH_CAUSE,"PATID, DEATH_CAUSE, DEATH_CAUSE_CODE, DEATH_CAUSE_TYPE, DEATH_CAUSE_SOURCE",unique
+DEATH_CAUSE,PATID,"required, not null"
+DEATH_CAUSE,DEATH_CAUSE,"required, not null"
+DEATH_CAUSE,DEATH_CAUSE_CODE,"required, not null"
+DEATH_CAUSE,DEATH_CAUSE_TYPE,"required, not null"
+DEATH_CAUSE,DEATH_CAUSE_SOURCE,"required, not null"
+HARVEST,"NETWORKID, DATAMARTID",unique
+HARVEST,NETWORKID,"required, not null"
+HARVEST,DATAMARTID,"required, not null"
